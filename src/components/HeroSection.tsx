@@ -15,38 +15,77 @@ export function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-slide-up">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground">Inscriptions ouvertes pour 2024-2025</span>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-slide-up">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-sm text-muted-foreground">Inscriptions ouvertes pour 2024-2025</span>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 font-[var(--font-heading)] animate-slide-up" style={{ animationDelay: "0.1s" }}>
+              Formez les{" "}
+              <span className="gradient-text">Ingénieurs</span>
+              <br />
+              de Demain
+            </h1>
+
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+              L&apos;Institut Technique Médical, Aéronautique et des Techniques Industrielles forme l&apos;élite technique de la RDC en météorologie, aviation, électronique et technologies industrielles.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+              <a
+                href="#admission"
+                className="group px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-all flex items-center gap-2"
+              >
+                Commencer l&apos;inscription
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="#programmes"
+                className="group px-8 py-4 rounded-xl glass-card text-foreground font-semibold text-lg hover:bg-white/10 transition-all flex items-center gap-2"
+              >
+                <Play className="w-5 h-5" />
+                Découvrir nos programmes
+              </a>
+            </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 font-[var(--font-heading)] animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Formez les{" "}
-            <span className="gradient-text">Ingénieurs</span>
-            <br />
-            de Demain
-          </h1>
-
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            L&apos;Institut Technique Médical, Aéronautique et des Techniques Industrielles forme l&apos;élite technique de la RDC en météorologie, aviation, électronique et technologies industrielles.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <a
-              href="#admission"
-              className="group px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-all flex items-center gap-2"
-            >
-              Commencer l&apos;inscription
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#programmes"
-              className="group px-8 py-4 rounded-xl glass-card text-foreground font-semibold text-lg hover:bg-white/10 transition-all flex items-center gap-2"
-            >
-              <Play className="w-5 h-5" />
-              Découvrir nos programmes
-            </a>
+          {/* Hero Image */}
+          <div className="relative animate-slide-up hidden lg:block" style={{ animationDelay: "0.4s" }}>
+            <div className="relative rounded-3xl overflow-hidden">
+              <img
+                src="/images/hero-students.jpg"
+                alt="Etudiants ITMAT en formation technique"
+                className="w-full h-[500px] object-cover rounded-3xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            </div>
+            
+            {/* Floating cards on image */}
+            <div className="absolute -bottom-6 -left-6 p-4 glass-card rounded-2xl animate-float">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <span className="text-2xl font-bold gradient-text">8</span>
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Filières</p>
+                  <p className="font-semibold text-foreground">Techniques</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="absolute -top-4 -right-4 p-4 glass-card rounded-2xl animate-float-delayed">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
+                  <span className="text-xl font-bold text-green-400">95%</span>
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Taux</p>
+                  <p className="font-semibold text-foreground">d&apos;insertion</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

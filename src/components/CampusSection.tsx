@@ -1,4 +1,4 @@
-import { MapPin, Building, Users, BookOpen } from "lucide-react"
+import { MapPin, Users, BookOpen } from "lucide-react"
 
 const campuses = [
   {
@@ -7,6 +7,7 @@ const campuses = [
     description: "Notre campus principal avec des installations modernes pour les formations en météorologie et navigation aérienne.",
     features: ["Laboratoire météo", "Simulateurs de vol", "Bibliothèque technique", "Internat"],
     students: "1500+",
+    image: "/images/campus-binza.jpg",
   },
   {
     name: "Campus de Ndolo",
@@ -14,6 +15,7 @@ const campuses = [
     description: "Centre d'excellence pour les formations industrielles avec des ateliers équipés de matériel de pointe.",
     features: ["Ateliers mécaniques", "Lab électronique", "Centre informatique", "Cafétéria"],
     students: "1200+",
+    image: "/images/campus-ndolo.jpg",
   },
 ]
 
@@ -39,10 +41,13 @@ export function CampusSection() {
               key={index}
               className="group rounded-3xl glass-card overflow-hidden hover:-translate-y-2 transition-all duration-300"
             >
-              <div className="h-48 bg-gradient-to-br from-primary/20 to-blue-500/10 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Building className="w-20 h-20 text-primary/30" />
-                </div>
+              <div className="h-56 relative overflow-hidden">
+                <img
+                  src={campus.image}
+                  alt={campus.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full glass text-sm text-foreground flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-primary" />
                   {campus.location}
