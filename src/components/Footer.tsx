@@ -40,7 +40,7 @@ export function Footer() {
               <span className="text-xl font-bold text-foreground font-[var(--font-heading)]">ITMAT</span>
             </a>
             <p className="text-muted-foreground mb-6">
-              Institut Technique Médical, Aéronautique et des Techniques Industrielles - Former l&apos;élite technique de demain.
+              Institut Technique Météorologie, Aéronautique et des Techniques Industrielles - Former l&apos;élite technique de demain.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (
