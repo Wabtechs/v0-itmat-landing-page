@@ -7,7 +7,7 @@ export function HeroSection() {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
-        
+
         {/* Floating geometric elements */}
         <div className="absolute top-1/4 right-1/4 w-20 h-20 border border-primary/30 rounded-lg rotate-45 animate-float" />
         <div className="absolute bottom-1/3 left-1/5 w-16 h-16 border border-blue-400/20 rounded-full animate-float-delayed" />
@@ -30,7 +30,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              L&apos;Institut Technique Médical, Aéronautique et des Techniques Industrielles forme l&apos;élite technique de la RDC en météorologie, aviation, électronique et technologies industrielles.
+              L&apos;Institut Technique Météorologie, Aéronautique et des Techniques Industrielles forme l&apos;élite technique de la RDC en météorologie, aviation, électronique et technologies industrielles.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
@@ -61,7 +61,7 @@ export function HeroSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             </div>
-            
+
             {/* Floating cards on image */}
             <div className="absolute -bottom-6 -left-6 p-4 glass-card rounded-2xl animate-float">
               <div className="flex items-center gap-3">
@@ -74,7 +74,7 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-            
+
             <div className="absolute -top-4 -right-4 p-4 glass-card rounded-2xl animate-float-delayed">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
