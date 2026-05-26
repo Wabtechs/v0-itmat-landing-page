@@ -1,30 +1,34 @@
-import { Navbar } from "./components/Navbar"
-import { HeroSection } from "./components/HeroSection"
-import { AboutSection } from "./components/AboutSection"
-import { ProgramsSection } from "./components/ProgramsSection"
-import { WhyChooseSection } from "./components/WhyChooseSection"
-import { StatsSection } from "./components/StatsSection"
-import { CampusSection } from "./components/CampusSection"
-import { AdmissionCTA } from "./components/AdmissionCTA"
-import { ContactSection } from "./components/ContactSection"
-import { Footer } from "./components/Footer"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { AuthProvider } from "./lib/auth-context"
+import { HomePage } from "./pages/HomePage"
+import { 
+  AdminLogin, 
+  AdminLayout, 
+  AdminDashboard, 
+  AdminPublications, 
+  AdminImages,
+  AdminSetup
+} from "./pages/admin"
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ProgramsSection />
-        <WhyChooseSection />
-        <StatsSection />
-        <CampusSection />
-        <AdmissionCTA />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* Public route */}
+          <Route path="/" element={<HomePage />} />
+          
+          {/* Admin routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/setup" element={<AdminSetup />} />
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<AdminDashboard />} />
+            <Route path="publications" element={<AdminPublications />} />
+            <Route path="images" element={<AdminImages />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   )
 }
 
