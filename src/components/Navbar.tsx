@@ -54,10 +54,10 @@ export function Navbar() {
 
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="#admission"
+            href="https://itmat.viraza.net/app/login/?codex=1779815357"
             className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
           >
-            Inscription
+            APP
           </a>
         </div>
 
@@ -83,11 +83,11 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#admission"
+              href="https://itmat.viraza.net/app/login/?codex=1779815357"
               className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm text-center hover:bg-primary/90 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Inscription
+              APP
             </a>
           </div>
         </div>
