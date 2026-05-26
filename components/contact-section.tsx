@@ -46,8 +46,8 @@ export function ContactSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-3 mb-6 font-serif text-balance">
             Entrons en contact
           </h2>
-          <p className="text-foreground/70 text-lg leading-relaxed">
-            Vous avez des questions sur nos programmes ou l&apos;inscription ? 
+          <p href="https://itmat.viraza.net/app/login/?codex=1779815357" className="text-foreground/70 text-lg leading-relaxed" >
+            Vous avez des questions sur nos programmes ou l&apos;APP ? 
             Notre équipe est là pour vous aider.
           </p>
         </div>
